@@ -29,3 +29,11 @@ repos:
         always_run: true
         verbose: true
         pass_filenames: false
+
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.2.3
+  hooks:
+    - id: nbqa-check-ast
+    - id: nbqa-flake8
+    - id: nbqa-isort
+    - id: nbqa-autopep8
