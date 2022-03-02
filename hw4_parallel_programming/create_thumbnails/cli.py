@@ -29,6 +29,7 @@ class PositiveCheck(argparse.Action):
 
 
 parser = argparse.ArgumentParser(
+    prog='create_thumbnails',
     description='Downloads images and make thumbnails from it.'
 )
 
@@ -38,7 +39,7 @@ parser.add_argument('source', type=Path, action=PathCheck,
 parser.add_argument('-jobs', type=int, default=1, action=PositiveCheck,
                     help='number of threads to use (default: %(default)s)')
 parser.add_argument('-max_res', nargs=2, type=int, default=(100, 100),
-                    action=PositiveCheck,
+                    action=PositiveCheck, metavar=('X', 'Y'),
                     help='max resolution of thumbnails (default: %(default)s)')
 parser.add_argument('-dest_dir', default='./thumbnails/', type=Path,
                     help=('path to directory to store results '
