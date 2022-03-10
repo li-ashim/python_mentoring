@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 class DirsCheck(argparse.Action):
-    '''Check paths for existence and correspondense to directorys.'''
+    """Check paths for existence and correspondense to directorys."""
     def __call__(self, parser, namespace, values, option_string) -> None:
         try:
             iter(values)

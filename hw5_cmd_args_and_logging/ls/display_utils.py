@@ -13,7 +13,7 @@ LAST_MOD = 16
 
 
 def display_header() -> None:
-    '''Display header of table.'''
+    """Display header of table."""
     print('Mode'.ljust(MODE),
           'Links'.ljust(NLINK),
           'Length'.ljust(SIZE),
