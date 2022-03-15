@@ -33,6 +33,7 @@ class ServerThread(Thread):
                 client, _ = self.sock.accept()
                 pool.apply_async(client_handler, (client, file))
             # Close the pool and wait for started tasks to complete
+            print('Stopping server...')
             pool.close()
             pool.join()
         self.sock.close()
